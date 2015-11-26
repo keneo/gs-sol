@@ -11,11 +11,28 @@ namespace GsNeedsBartek.Tests
     [TestFixture]
     public class SeriesTest
     {
+        float firstNumber = 0;
+        float growRate = 1;
+        int length = 10;
+        IEnumerable<float> series;
+
+        public IEnumerable<float> GivenSeries()
+        {
+            series = Series.OveralSeries(firstNumber, growRate, length);
+            return series;
+        }
+
+        [Test]
+        public void SeriesLengthShouldBeAsRequested()
+        {
+            GivenSeries();
+            series.Count().ShouldBeEquivalentTo(10, "series length sould be as long as requested");
+        }
         
         [Test]
         public void SeriesShouldNotContainAnyDuplicates()
         {
-            var series = Series.OveralSeries(0, 1, 10);
+            GivenSeries();
 
 
             var duplicates = series.ToLookup(x => x).Where(e => e.Count() > 1);
@@ -26,21 +43,27 @@ namespace GsNeedsBartek.Tests
         [Test]
         public void SeriesShouldBeOrderedAscending()
         {
-            var series = Series.OveralSeries(0, 1, 10);
+            GivenSeries();
            
             series.Should().BeInAscendingOrder("series should be ordered ascending");
         }
 
         [Test]
-        public void NumbersInTheSeriesShouldBeRounded() //todo nearest
+        public void NumbersInTheSeriesShouldBeRounded() 
         {
-            var series = Series.OveralSeries(0, 1, 10);
+            GivenSeries();
 
             
 
             series.Should()
                 .Match(s => s.All(e =>  e%0.25f == 0), "numbers in the series should be rounded");
 
+        }
+
+        [Test]
+        public void NumbersInTheSeriesShouldBeRoundedToTheNearest() 
+        {
+            throw new NotImplementedException();
         }
     }
 }
