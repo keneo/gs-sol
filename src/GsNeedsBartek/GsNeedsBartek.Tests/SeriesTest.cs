@@ -11,10 +11,11 @@ namespace GsNeedsBartek.Tests
     [TestFixture]
     public class SeriesTest
     {
+        
         [Test]
         public void SeriesShouldNotContainAnyDuplicates()
         {
-            var series = new Series().OveralSeries(0, 1, 10);
+            var series = Series.OveralSeries(0, 1, 10);
 
 
             var duplicates = series.ToLookup(x => x).Where(e => e.Count() > 1);
@@ -25,7 +26,7 @@ namespace GsNeedsBartek.Tests
         [Test]
         public void SeriesShouldBeOrderedAscending()
         {
-            var series = new Series().OveralSeries(0, 1, 10);
+            var series = Series.OveralSeries(0, 1, 10);
            
             series.Should().BeInAscendingOrder("series should be ordered ascending");
         }
@@ -33,7 +34,7 @@ namespace GsNeedsBartek.Tests
         [Test]
         public void NumbersInTheSeriesShouldBeRounded() //todo nearest
         {
-            var series = new Series().OveralSeries(0, 1, 10);
+            var series = Series.OveralSeries(0, 1, 10);
 
             
 
