@@ -34,10 +34,7 @@ namespace GsNeedsBartek.Tests
         {
             GivenSeries();
 
-
-            var duplicates = series.ToLookup(x => x).Where(e => e.Count() > 1);
-
-            duplicates.Should().BeEmpty("series should not contain any duplicates");
+            series.Should().OnlyHaveUniqueItems("series should not contain any duplicates");
         }
 
         [Test]
