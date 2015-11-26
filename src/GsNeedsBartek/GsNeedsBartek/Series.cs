@@ -32,6 +32,19 @@ namespace GsNeedsBartek
             return -1; //todo
         }
 
+        private static IEnumerable<float> OverallSeriesFormula(float firstNumber, float growthRate)
+        {
+            yield return firstNumber;
+
+            float number = growthRate;
+
+            while (true)
+            {
+                yield return number;
+                number *= firstNumber;
+            }
+        }
+
         /// <summary>
         /// c. The overall series is calculated using a function that accepts three parameters
         ////firstNumber – the number from a.
@@ -47,7 +60,18 @@ namespace GsNeedsBartek
         /// <returns></returns>
         public static IEnumerable<float> OverallSeries(float firstNumber, float growthRate, int length)
         {
-            yield return -1;//todo
+            return
+                OverallSeriesFormula(firstNumber, growthRate)
+                .Distinct()
+                .Take(length)
+                .OrderBy(x=>x)
+                .Select(x=>ApplyRounding(x));
+
+        }
+
+        private static float ApplyRounding(float f)
+        {
+            return (float) (Math.Round(f*4)/4);
         }
     }
 }
