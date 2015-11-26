@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GsNeedsBartek", "GsNeedsBartek\GsNeedsBartek.csproj", "{328C1440-71D8-454B-970D-BC4BEC28473E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GsNeedsBartek.Tests", "GsNeedsBartek.Tests\GsNeedsBartek.Tests.csproj", "{893395D2-6E76-4D35-B65E-3E8885BDFBCC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{328C1440-71D8-454B-970D-BC4BEC28473E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{328C1440-71D8-454B-970D-BC4BEC28473E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{328C1440-71D8-454B-970D-BC4BEC28473E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{328C1440-71D8-454B-970D-BC4BEC28473E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893395D2-6E76-4D35-B65E-3E8885BDFBCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893395D2-6E76-4D35-B65E-3E8885BDFBCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893395D2-6E76-4D35-B65E-3E8885BDFBCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893395D2-6E76-4D35-B65E-3E8885BDFBCC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
