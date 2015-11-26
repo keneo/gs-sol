@@ -45,7 +45,7 @@ namespace GsNeedsBartek
         /// <param name="growthRate"></param>
         /// <param name="length"></param>
         /// <returns></returns>
-        public static IEnumerable<float> OveralSeries(float firstNumber, float growthRate, int length)
+        public static IEnumerable<float> OverallSeries(float firstNumber, float growthRate, int length)
         {
             yield return -1;//todo
         }

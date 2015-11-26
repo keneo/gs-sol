@@ -9,7 +9,7 @@ using FluentAssertions;
 namespace GsNeedsBartek.Tests
 {
     [TestFixture]
-    public class SeriesTest
+    public class OverallSeriesTest
     {
         float firstNumber = 0;
         float growRate = 1;
@@ -18,7 +18,7 @@ namespace GsNeedsBartek.Tests
 
         public IEnumerable<float> GivenSeries()
         {
-            series = Series.OveralSeries(firstNumber, growRate, length);
+            series = Series.OverallSeries(firstNumber, growRate, length);
             return series;
         }
 
