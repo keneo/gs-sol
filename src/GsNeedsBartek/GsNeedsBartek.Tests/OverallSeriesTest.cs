@@ -11,9 +11,9 @@ namespace GsNeedsBartek.Tests
     [TestFixture]
     public class OverallSeriesTest
     {
-        float firstNumber = 0;
-        float growRate = 1;
-        int length = 10;
+        float firstNumber = 1.62f;
+        float growRate = 2.5f;
+        int length = 5;
         IEnumerable<float> series;
 
         public IEnumerable<float> GivenSeries()
@@ -26,7 +26,7 @@ namespace GsNeedsBartek.Tests
         public void SeriesLengthShouldBeAsRequested()
         {
             GivenSeries();
-            series.Count().ShouldBeEquivalentTo(10, "series length sould be as long as requested");
+            series.Count().ShouldBeEquivalentTo(length, "series length sould be as long as requested");
         }
         
         [Test]
