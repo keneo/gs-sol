@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GsNeedsBartek
 {
-    public class Series
+    public class SeriesGenerator
     {
         /// <summary>
         /// a. The first number is calculated given the following function (which accepts a parameter ‘x’):
@@ -16,7 +16,7 @@ namespace GsNeedsBartek
         /// <returns></returns>
         public static float FirstNumber(float x)
         {
-            return -1; //todo
+            return (0.5f*x*x + 30*x + 10)/25;
         }
 
         /// <summary>
@@ -29,7 +29,7 @@ namespace GsNeedsBartek
         /// <returns></returns>
         public static float GrowRate(float y, float firstNumber)
         {
-            return -1; //todo
+            return (y*0.02f)/25/firstNumber;
         }
 
         private static IEnumerable<float> OverallSeriesFormula(float firstNumber, float growthRate)

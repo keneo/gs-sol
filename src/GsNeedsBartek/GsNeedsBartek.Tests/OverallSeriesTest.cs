@@ -18,7 +18,7 @@ namespace GsNeedsBartek.Tests
 
         public IEnumerable<float> GivenSeries()
         {
-            series = Series.OverallSeries(firstNumber, growRate, length);
+            series = SeriesGenerator.OverallSeries(firstNumber, growRate, length);
             return series;
         }
 
